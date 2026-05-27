@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Endurance Allroad Bike – Size S</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <div class="container header">
+    <strong>Private Bike Sale</strong>
+    <div class="lang-switch">
+      <button onclick="setLang('de')">DE</button>
+      <button onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1 data-de="Endurance Allroad Rennrad – Größe S"
+        data-en="Endurance Allroad Road Bike – Size S">
+      Endurance Allroad Rennrad – Größe S
+    </h1>
+
+    <p class="subtitle"
+       data-de="Privatverkauf · Sofort verfügbar · Größe aktuell ausverkauft beim Hersteller"
+       data-en="Private sale · Available immediately · Size currently sold out from manufacturer">
+    </p>
+
+    <div class="price">€ XXXX</div>
+
+    <!-- PayPal -->
+    <a class="buy-btn"
+       href="https://www.paypal.me/DEINNAME/XXXX"
+       target="_blank"
+       data-de="Jetzt kaufen"
+       data-en="Buy now">
+    </a>
+  </section>
+
+  <!-- DETAILS -->
+  <section>
+    <h2 data-de="Produktdetails" data-en="Product details"></h2>
+    <ul>
+      <li data-de="Größe: S"
+          data-en="Size: S"></li>
+
+      <li data-de="Zustand: Neu, vollständig montiert"
+          data-en="Condition: New, fully assembled"></li>
+
+      <li data-de="Kette professionell gewachst"
+          data-en="Professionally waxed chain"></li>
+
+      <li data-de="Sofort versandbereit aus Deutschland"
+          data-en="Ready for immediate shipping from Germany"></li>
+
+      <li data-de="Privatverkauf – kein gewerblicher Händler"
+          data-en="Private sale – not a commercial dealer"></li>
+    </ul>
+  </section>
+
+  <!-- WHY -->
+  <section class="highlight">
+    <h2 data-de="Warum dieses Bike?"
+        data-en="Why this bike?"></h2>
+
+    <p data-de="Dieses Fahrrad ist bereits komplett aufgebaut und fahrbereit. 
+    Die Kette wurde gewachst für leiseren Lauf und geringeren Verschleiß. 
+    Die Größe S ist aktuell beim Hersteller nicht verfügbar – dieses Angebot ist sofort lieferbar."
+       
+       data-en="This bike is already fully assembled and ready to ride.
+       The chain has been waxed for smoother performance and reduced wear.
+       Size S is currently unavailable from the manufacturer – this one is ready to ship immediately.">
+    </p>
+  </section>
+
+  <!-- SHIPPING -->
+  <section>
+    <h2 data-de="Versand & Bezahlung"
+        data-en="Shipping & payment"></h2>
+
+    <p data-de="Versand innerhalb Deutschlands mit DHL / DPD. 
+    Nach Zahlungseingang erfolgt der Versand schnellstmöglich inkl. Tracking."
+       
+       data-en="Shipping within Germany via DHL / DPD.
+       After payment, the bike will be shipped promptly with tracking information.">
+    </p>
+  </section>
+
+  <!-- IMPRESSUM -->
+  <section class="impressum">
+    <h2>Impressum</h2>
+    <p>
+      Privatverkauf gemäß §13 BGB<br/>
+      Keine Garantie oder Rücknahme<br/>
+      Kontakt: <strong>deine-email@example.com</strong>
+    </p>
+  </section>
+
+</main>
+
+<script>
+function setLang(lang) {
+  document.documentElement.lang = lang;
+  document.querySelectorAll("[data-de]").forEach(el => {
+    el.textContent = el.getAttribute("data-" + lang);
+  });
+}
+setLang('de');
+</script>
+
+</body>
+</html>
