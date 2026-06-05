@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: system-ui, sans-serif;
   background: #f5f5f5;
   color: #222;
 }
@@ -11,7 +11,7 @@ header {
 }
 
 .container {
-  max-width: 900px;
+  max-width: 980px;
   margin: auto;
   padding: 20px;
 }
@@ -23,44 +23,115 @@ header {
 }
 
 .lang-switch button {
-  margin-left: 5px;
+  margin-left: 6px;
+  padding: 6px 10px;
   cursor: pointer;
 }
 
 .hero {
   text-align: center;
-  margin: 40px 0;
 }
 
 .subtitle {
   color: #555;
 }
 
-.price {
-  font-size: 2.2em;
+.gallery {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 14px;
   margin: 20px 0;
 }
 
+.photo {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.photo img {
+  width: 100%;
+  cursor: zoom-in;
+}
+
+.price {
+  font-size: 2.2em;
+  margin: 20px 0 10px;
+}
+
 .buy-btn {
-  display: inline-block;
   background: #000;
   color: #fff;
-  padding: 15px 30px;
+  padding: 14px 28px;
   text-decoration: none;
-  border-radius: 6px;
+  border-radius: 8px;
+  font-weight: bold;
 }
 
-section {
-  margin: 40px 0;
+.secure {
+  margin-top: 6px;
+  color: #555;
 }
 
-.highlight {
+.specs-summary {
+  cursor: pointer;
   background: #fff;
-  padding: 20px;
-  border-left: 4px solid #000;
+  padding: 14px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.specs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.spec-card {
+  background: #fff;
+  padding: 14px;
+  border-radius: 10px;
+}
+
+.spec-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.faq details {
+  background: #fff;
+  padding: 12px;
+  border-radius: 10px;
+  margin: 10px 0;
 }
 
 .impressum {
   font-size: 0.9em;
   color: #555;
+}
+
+/* Zoom */
+.zoom-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.zoom-overlay img {
+  max-width: 95%;
+  max-height: 95%;
+  border-radius: 12px;
+}
+
+@media (max-width: 800px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+  .specs-grid {
+    grid-template-columns: 1fr;
+  }
 }
